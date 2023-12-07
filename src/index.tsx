@@ -45,6 +45,7 @@ export const ImageSlider = ({
   closeIconColor = "#000",
   blurRadius = 50,
   indicatorStyle = {},
+  userHeight = 300,
 }: PropsTypes) => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const imageW = width * 0.7;
@@ -255,7 +256,10 @@ export const ImageSlider = ({
                   <Image
                     // @ts-ignore
                     source={localImg ? item.img : { uri: item.img }}
-                    style={[styles.caroselImageStyle, caroselImageStyle]}
+                    style={[
+                      styles.caroselImageStyle(userHeight),
+                      caroselImageStyle,
+                    ]}
                   />
                 </TouchableOpacity>
                 {children}
@@ -264,14 +268,7 @@ export const ImageSlider = ({
           );
         }}
       />
-      {/* <View
-        style={{
-          flex: 1,
-          position: "absolute",
-          bottom: 20,
-          alignSelf: "center",
-        }}
-      > */}
+
       <View style={indicatorStyle}>
         {showIndicator && (
           <Indicator

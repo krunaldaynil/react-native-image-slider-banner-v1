@@ -125,6 +125,11 @@ export interface PropsTypes {
    * @default 50
    */
   blurRadius?: number;
+  /**
+   * Image height
+   * @default 300
+   */
+  userHeight?: number;
 }
 
 // export {
