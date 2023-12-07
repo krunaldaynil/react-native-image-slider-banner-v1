@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-slider-banner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple and fully customizable React Native Component that implements Image and Banner Slider UI with animations.",
   "main": "index.ts",
   "scripts": {
