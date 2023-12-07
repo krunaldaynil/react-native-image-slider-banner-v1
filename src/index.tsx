@@ -37,7 +37,7 @@ export const ImageSlider = ({
   activeIndicatorStyle = {},
   inActiveIndicatorStyle = {},
   indicatorContainerStyle = {},
-  onItemChanged = (itemData) => {},
+  onItemChanged = (itemData, itemIndex) => {},
   localImg = false,
   onClick = (item: DataType, index: number) => {},
   preview = true,
@@ -58,7 +58,7 @@ export const ImageSlider = ({
     // Use viewable items in state or as intended
     if (viewableItems.length > 0) {
       let index = viewableItems[0].index;
-      onItemChanged(viewableItems[0].item);
+      onItemChanged(viewableItems[0].item, index);
       setSelectedIndex(index);
     }
   });

@@ -109,7 +109,7 @@ export interface PropsTypes {
    * when item changed its give item data in parameter
    * @default (itemData) => {}
    */
-  onItemChanged?: (itemData: DataType) => void;
+  onItemChanged?: (itemData: DataType, index: number) => void;
   /**
    * when click on any item its give item data in parameter and when onClick Present so slider not show IMAGE PREVIEW on Click
    * @default (item, index) => {},
